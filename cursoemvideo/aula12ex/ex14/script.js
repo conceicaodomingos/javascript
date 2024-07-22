@@ -6,15 +6,15 @@ function carregar() {
     msg.innerHTML = `Agora são ${hora} horas.`
 
     if (hora >= 0 && hora < 12) {
-        // Bom dia
+        msg.innerHTML += ` Bom dia!`
         img.src = './imagens/foto-manha.jpg'
         document.body.style.background = '#e2cd9f'
     } else if (hora <= 17) {
-        // Boa tarde
+        msg.innerHTML += ` Boa tarde!`
         img.src = './imagens/foto-tarde.jpg' 
         document.body.style.background = '#b9846f'
     } else {
-        // Boa noite
+        msg.innerHTML += ` Boa noite!`
         img.src = './imagens/foto-noite.jpg'
         document.body.style.background = '#515154'
     }
