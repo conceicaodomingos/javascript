@@ -9,14 +9,14 @@
     <h1>Nacionalidade do Cidadão</h1>
     País de Nascimento: <input type="text" name="txtpais" id="txtpais">
     <input type="button" value="Verificar" onclick="verificar()">
-    <div id="res">
-
-    </div>
+    <div id="res"></div>
     <script>
         function verificar() {
-            var txtp  = window.document.getElementById('txtpais')
+            var txtp = window.document.getElementById('txtpais')
             var res = window.document.getElementById('res')
-            res.innerHTML = `<p>Seu país de nascimento é <strong>${txtp}</strong></p>`
+            var pais = txtp.value
+
+            res.innerHTML = `<p>Seu país de nascimento é <strong>${pais}</strong></p>`
             if (pais == Angola) {
                 res.innerHTML += `<p>Você é angolano!</p>`
             } else {
