@@ -26,12 +26,12 @@
             r = window.document.getElementById("r")
 
             r.innerHTML = `<h2>A distância de ${d} metros, corresponde a...</h2>\n`
-            r.innerHTML += `${d/1000} quilometros (km)\n`
-            r.innerHTML += `${d/100} hectometros (hm)\n`
-            r.innerHTML += `${d/10} decametros (dam)\n`
-            r.innerHTML += `${d*10} decimetros (dm)\n`
-            r.innerHTML += `${d*100} centimetros (cm)\n`
-            r.innerHTML += `${d*1000} milimetros (mm)`
+            r.innerHTML += `<p>${d/1000} quilometros (km)</p>`
+            r.innerHTML += `<p>${d/100} hectometros (hm)</p>`
+            r.innerHTML += `<p>${d/10} decametros (dam)</p>`
+            r.innerHTML += `<p>${d*10} decimetros (dm)</p>`
+            r.innerHTML += `<p>${d*100} centimetros (cm)</p>`
+            r.innerHTML += `<p>${d*1000} milimetros (mm)</p>`
         }
     </script>
 </body>
