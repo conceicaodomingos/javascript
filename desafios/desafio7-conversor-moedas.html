@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Moedas</title>
+    <style>
+        body {
+            font: normal 16px Arial;
+        }
+        button {
+            font: normal 16px arial;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor AOA ===> US$ </h1>
+    <button onclick="converter()">Converter</button>
+    <p>Clique no botão acima para iniciar</p>
+    <div id="r"></div>
+    <script>
+        c = Number(window.prompt("Qual é a cotação actual do dólar?"))
+        function converter() {
+             v = Number(window.prompt("Quantos kawnzas você tem?"))
+             r = window.document.getElementById("r")
+
+             r.innerHTML = `<p>Com ${v} kwanzas você consegue comprar ${v / c} dólares</p>`
+        }
+    </script>
+</body>
+</html>
