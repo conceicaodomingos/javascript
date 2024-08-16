@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <style>
+        body {
+            font: normal 16px Arial;
+        }
+        button {
+            font: normal 16px arial;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temparaturas</h1>
+    <button onclick="converter()">Converter</button>
+    <p>Clique no botão acima para iniciar</p>
+    <div id="r"></div>
+
+    <script>
+        function converter() {
+            tc = Number(window.prompt("Digite uma temperatura em ºC (Celsius)"))
+            r = window.document.getElementById("r")
+            
+            r.innerHTML = `<h2>A temperatura de ${tc} ºC, corresponde a...</h2>`
+            r.innerHTML += `<p>${tc + 273} K (Kelvin)</p>`
+            r.innerHTML += `<p>${1.8 * tc + 32} ºF (Fahrenheit)</>`
+        }
+    </script>
+</body>
+</html>
