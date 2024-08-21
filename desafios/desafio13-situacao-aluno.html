@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação Aluno</title>
+    <style>
+        body {
+            font: normal 16px Arial;
+        }
+        button {
+            font: normal 16px arial;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Situação do Aluno</h1>
+    <button onclick="calcular()">Entrar com as notas</button>
+    <div id="r"><p>Cliqueno botão acima para informar as notas do aluno.</p></div>
+
+    <script>
+        function calcular() {
+            nome = window.prompt("Qual é o nome do aluno?")
+            nota1 = Number(window.prompt(`Primeira nota de ${nome}:`))
+            nota2 = Number(window.prompt(`Segunda nota de ${nome}:`))
+            media = (nota1 + nota2) / 2
+            r.innerHTML = `<h2>Analisando a situação de ${nome}</h2>`
+
+            if (media < 3) {
+                r.innerHTML += `<p>Com as notas ${nota1} e ${nota2}, a <strong>média é ${media}</strong></p>`
+                r.innerHTML += `<p>Com média abaixo de 3,0, o aluno está <span color: #ff0000;>REPROVADO</span></p>`
+            } else if (media < 6) {
+                r.innerHTML += `<p>Com as notas ${nota1} e ${nota2}, a <strong> média é ${media}</strong></p>`
+                r.innerHTML += `<p>Com média entre 3,0 e 6,0, o aluno está em <span color: #ff0000;>RECUPERAÇÃO</span></p>`
+            } else {
+                r.innerHTML += `<p>Com as notas ${nota1} e ${nota2}, a <strong>média é ${media}</strong></p>`
+                r.innerHTML += `<p>Com média acima de 6,0, o aluno está <span color: #ff0000;>APROVADO</span></p>`
+            }
+        }
+    </script>
+</body>
+</html>
