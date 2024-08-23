@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+        body { 
+            font: 16px Arial; 
+        }
+        button { 
+            font-size: 16px; 
+            padding: 30px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Dados (Versão 1)</h1>
+    <button onclick="clicar()">Clique para começar</button>
+    <script>
+        function clicar() {
+            let nome = window.prompt("Qual é o seu nome?")
+            window.alert(`Oi ${nome}!, é um prazer te conhecer.`)
+        }
+    </script>
+</body>
+</html>
