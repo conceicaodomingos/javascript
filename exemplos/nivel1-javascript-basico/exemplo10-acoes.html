@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acões com JavaScript</title>
+    <style>
+        body { 
+            font: 16px Arial; 
+        }
+        button { 
+            font-size: 16px; 
+            padding: 30px; 
+        }
+        h1 { 
+            font-family: 'Pacifico', cursive; font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ações em JavaScript</h1>
+    <button onclick="acao1()">Acão 1</button>
+    <button onclick="acao2()">Acão 2</button>
+    <button onclick="acao3()">Acão 3</button>
+    <button onclick="acao4()">Acão 4</button>
+    <section id="r">
+        <p>Aqui serão registadas suas ações com os botões acima.</p>
+    </section>
+    <script>
+        let r = window.document.getElementById('r')
+        function acao1() {
+            r.innerHTML += "<p>Você clicou no primeiro botão</p>"
+        }
+        function acao2() {
+            r.innerHTML += "<p>Você clicou no segundo botão</p>"
+        }
+        function acao3() {
+            r.innerHTML += "<p>Você clicou no terceiro botão</p>"
+        }
+        function acao4() {
+            r.innerHTML += "<p>Você clicou no quarto botão</p>"
+        }
+    </script>
+</body>
+</html>
