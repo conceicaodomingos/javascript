@@ -25,16 +25,15 @@
     </section>
 
     <script>
-        let numero = Number(window.prompt("Digite um número:"))
         let resultado = window.document.getElementById("resultado")
         let tipo
 
         function teste() {
+            let numero = Number(window.prompt("Digite um número: "))
             if (numero % 2 == 0) {
                 tipo = '<strong>PAR</strong>'
             } else {
-                tipo = '<strong>ÍMPAR</strong>'
-                
+                tipo = '<strong>ÍMPAR</strong>' 
             }
             resultado.innerHTML = `<p>O número ${numero} que foi digitado é ${tipo}</p>`
         }

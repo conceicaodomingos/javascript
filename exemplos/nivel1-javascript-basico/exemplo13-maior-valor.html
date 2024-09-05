@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html lang="pt">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Valor</title>
+    <style>
+       body { 
+            font: 16px Arial; 
+        }
+        button { 
+            font-size: 16px; 
+            padding: 30px; 
+        }
+        h1 { 
+            font-family: 'Pacifico', cursive; font-weight: normal;
+        }
+    </style>
+ </head>
+ <body>
+   <h1>Maior Valor</h1>
+   <button onclick="maiorValor()">Clique para começar</button>
+   <section id="resultado">
+      <p>O resultado vai aparecer aqui...</p>
+   </section>
+
+   <script>
+      let resultado = window.document.getElementById("resultado")
+      let maior
+      function maiorValor() {
+         numero1 = Number(window.prompt("Digite um número: "))
+         numero2 = Number(window.prompt("Digite outro número: "))
+         if (numero1 == numero2) {
+            resultado.innerHTML = `<p>Analisando os valores <mark>${numero1}</mark> e <mark>${numero2}</mark>, ambos são <strong>IGUAIS</strong></p>`
+         } else if (numero1 < numero2) {
+            resultado.innerHTML = `<p>Analisando os valores <mark>${numero1}</mark> e <mark>${numero2}</mark>, o maior valor é <strong>${numero2}</strong></p>`
+         } else {
+            resultado.innerHTML = `<p>Analisando os valores <mark>${numero1}</mark> e <mark>${numero2}</mark>, o maior valor é <strong>${numero1}</strong></p>`
+         }
+      }
+   </script>
+ </body>
+ </html>
