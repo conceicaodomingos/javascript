@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>É par ou ímpar?</h1>
-    <button onclick="teste()">Clique para iniciar</button>
+    <button onclick="parImpar()">Clique para iniciar</button>
     <section id="resultado">
         <p>O resultado vai aparecer aqui...</p>
     </section>
@@ -28,7 +28,7 @@
         let resultado = window.document.getElementById("resultado")
         let tipo
 
-        function teste() {
+        function parImpar() {
             let numero = Number(window.prompt("Digite um número: "))
             if (numero % 2 == 0) {
                 tipo = '<strong>PAR</strong>'
